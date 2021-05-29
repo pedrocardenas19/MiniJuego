@@ -4,8 +4,7 @@ public class BichosNormales extends Bichos{
     }
     public String toString(){
        try{
-            return "BN-"+this.getSalud;
-
+            return "BN-"+this.getSalud();
         }
         catch(NullPointerException e){
             return "vacío";

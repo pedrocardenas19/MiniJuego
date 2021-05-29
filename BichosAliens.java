@@ -5,8 +5,7 @@ public class BichosAliens extends Bichos{
 
     public String toString(){
         try{
-            return "BA-"+this.getSalud;
-
+            return "BA-"+this.getSalud();
         }
         catch(NullPointerException e){
             return "vacío";
