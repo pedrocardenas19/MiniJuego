@@ -6,47 +6,48 @@ public class PrincipalBichos{
         Scanner sc= new Scanner(System.in);
         int entrada= sc.nextInt();
         if(entrada==1){
-            int num1 = (int)(Math.random() * 4+1);
-            System.out.println("Se crearán "+num1+" Bichos");
+            int numDeBichos = (int)(Math.random() * 4+1);
+            System.out.println("Se crearán "+numDeBichos+" Bichos");
             int contador=0;
-            int contador2=0;
-            for(int m=0; m<num1; m++){
-                int num2 = (int)(Math.random() * 2+1);
-
+            for(int m=0; m < numDeBichos; m++){
+                int tipoBicho = (int)(Math.random() * 2+1);
                 if(contador==0){
-                    if(num2==1){
+                    if(tipoBicho==1){
                         bichos[0][0]=new BichosNormales();
                     }
-                    else if(num2==2){
+                    else if(tipoBicho==2){
                         bichos[0][0]=new BichosAliens();
                     }
                 }
+                
                 if(contador==1){
-                    if(num2==1){
+                    if(tipoBicho==1){
                         bichos[0][1]=new BichosNormales();
                     }
-                    else if(num2==2){
+                    else if(tipoBicho==2){
                         bichos[0][1]=new BichosAliens();
                     }
                 }
+                
                 if(contador==2){
-                    if(num2==1){
+                    if(tipoBicho==1){
                         bichos[1][0]=new BichosNormales();
                     }
-                    else if(num2==2){
+                    else if(tipoBicho==2){
                         bichos[1][0]=new BichosAliens();
                     }
                 }
+                
                 if(contador==3){
-                    if(num2==1){
+                    if(tipoBicho==1){
                         bichos[1][1]=new BichosNormales();
                     }
-                    else if(num2==2){
+                    else if(tipoBicho==2){
                         bichos[1][1]=new BichosAliens();
                     }
                 }
                 contador++;
-                num2 = (int)(Math.random() * 2+1);
+                tipoBicho = (int)(Math.random() * 2+1);
             }
             System.out.println(bichos[0][0]);
             System.out.println(bichos[0][1]);
